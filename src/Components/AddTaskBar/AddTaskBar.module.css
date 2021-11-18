@@ -1,0 +1,23 @@
+.bar{
+    margin: 20px 0;
+    align-self: center;
+    width: 600px;
+    display: flex;
+}
+
+.bar > *{
+    border: 0;
+    padding: 10px 0 ;
+}
+
+.bar input{
+    outline: none;
+    padding: 0 10px;
+    width: 90%;
+}
+
+.bar button{
+    color: #F05454;
+    background-color: #222831;
+    width: 10%;
+}
