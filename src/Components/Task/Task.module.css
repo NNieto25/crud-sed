@@ -1,0 +1,40 @@
+.task{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    color: #30475E;
+    background-color: #a8dadc;
+}
+
+.task > * {
+    border: 0;
+    padding:  10px 0;
+}
+
+.task > input {
+    background: #30475E;
+    margin-left: 20px;
+}
+
+.task p{
+    margin: 0;
+    width: 80%;
+}
+
+.task > button{
+    height: 105%;
+    color: #DDDDDD;
+    width: 10%;
+}
+
+.task > button:nth-child(3){
+    background-color: #30475E;
+}
+
+.task > button:nth-child(2){
+    background-color: #F05454;
+}
+
+
