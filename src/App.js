@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import AddTaskBar from './Components/AddTaskBar/AddTaskBar';
 import Task from './Components/Task/Task';
-import {createTask, getTasks, updateTask, deleteTask} from './Helpers/Tasks'
+import {createTask, getTasks, updateTask, deleteTask} from './Helpers/Task'
 
 function App() {
   const [tasks, setTasks] = useState([]);
