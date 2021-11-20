@@ -9,7 +9,7 @@ const AddTaskBar = ({onAddTask}) => {
     
     return(
         <div className={styles.bar}>
-            <input type="text" onChange={onChange}/>
+            <input type="text" onChange={onChange} value = {text} />
             <button onClick={() => {onAddTask(text); setText('');}}><FaPlus/> </button>
         </div>
     )
