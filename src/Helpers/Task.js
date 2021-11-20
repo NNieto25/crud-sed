@@ -1,4 +1,4 @@
-const API_URL = 'localhost:3000';
+const API_URL = 'http://127.0.0.1:3000';
 
 export const getTasks = async () => {
     try {
@@ -17,20 +17,15 @@ export const getTasks = async () => {
 export const createTask = async (text) => {
     try {
         const URL = `${API_URL}/tasks/create`;
+
         const request = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: {
-                text: text
-            }
+            body: JSON.stringify({ text: text })
         }
-
-        const response = await fetch(URL, request);
-        const {
-            success
-        } = response.json();
+        const {success} = await fetch(URL, request);
         return success;
 
     } catch (error) {
@@ -47,9 +42,7 @@ export const updateTask = async (taskId, text) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: {
-                text: text
-            }
+            body: JSON.stringify({ text: text })
         }
 
         const response = await fetch(URL, request);
