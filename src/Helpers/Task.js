@@ -26,9 +26,7 @@ export const createTask = async (text) => {
             body: JSON.stringify({ text: text })
         }
         const response = await fetch(URL, request);
-        const {ok} = response.json();
-        console.log(ok);
-        return ok;
+        return response.ok;
 
     } catch (error) {
         console.error(error);
@@ -48,9 +46,7 @@ export const updateTask = async (taskId, text) => {
         }
 
         const response = await fetch(URL, request);
-        const {ok} = response.json();
-        console.log(ok);
-        return ok;
+        return response.ok;
 
     } catch (error) {
         console.error(error);
@@ -69,9 +65,7 @@ export const deleteTask = async (taskId) => {
         };
 
         const response = await fetch(URL, request);
-        const {ok} = response.json();
-        console.log(ok);
-        return ok;
+        return response.ok;
         
     } catch (error) {
         console.error(error);
